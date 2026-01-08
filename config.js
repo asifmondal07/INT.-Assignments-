@@ -1,6 +1,10 @@
-import  "dotenv/config.js"
+import dotenv from 'dotenv';
 
-export default{
-    port: process.env.port || 2000,
-    openAiKey:process.env.openAiKey
-}
+dotenv.config(); 
+
+const config = {
+  port: process.env.PORT || 1000,
+  openAiKey: process.env.OPENAI_API_KEY
+};
+
+export default config;
